@@ -5,7 +5,15 @@ h1 { font-size:100px; }
 
 
 #countButton 
-{ color:aqua; 
+{ 
+color:aqua; 
 font-size:40px;
 }
-#displayCount { color:aqua; }
+
+
+
+#displayCount 
+{ 
+color:aqua; 
+font-size:30px;
+}
