@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Monke Clicker</title>
+	<h1>Welcome To Monke Clicker created by charlie</h1>
+	<h5>Why is this website important? Why does it even exist? These are the questions I ask myself everyday. This website is useless. Leave while you can.</h5>
+	
+<div>
+<input type="button" value="MONKE BUTTON" id="countButton">
+there is - <span id="displayCount"></span> monkeys.
+</div>
+<script>
+
+var count = 0
+var countButton=document.getElementById("countButton");
+var displayCount=document.getElementById("displayCount");
+countButton.onclick = function() {
+count++;
+displayCount.innerHTML = count;
+
+}
+if (count = 0) {
+const testElement = document.querySelector('div');
+const lineBreak = document.createElement('br');
+testElement.appendChild(lineBreak);
+}
+
+const button = document.querySelector('input[type="button"]');
+button.addEventListener('click', event => {
+
+   const othermonke = document.createElement("img");
+   othermonke.src = "./monke.jpg";
+   othermonke.width = "35";
+   othermonke.height = "35";
+   othermonke.alt = "alttext";
+
+   button.parentElement.appendChild(othermonke);
+});
+
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>
