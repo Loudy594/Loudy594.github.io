@@ -4,5 +4,8 @@ h1 { font-size:100px; }
 
 
 
-#countButton { color:aqua; }
+#countButton 
+{ color:aqua; 
+font-size:40px;
+}
 #displayCount { color:aqua; }
