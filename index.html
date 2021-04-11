@@ -1,48 +1,35 @@
+<!doctype html>
 <html>
 <head>
+  <link rel="stylesheet" href="styles.css">
+
 <meta charset="utf-8">
-<title>Monke Clicker</title>
-	<h1>Welcome To Monke Clicker created by charlie</h1>
-	<h5>Why is this website important? Why does it even exist? These are the questions I ask myself everyday. This website is useless. Leave while you can.</h5>
-  <link href="main.css" rel="stylesheet">
-	
-<div>
-<input type="button" value="MONKE BUTTON" id="countButton">
-there is - <span id="displayCount"></span> monkeys.
-</div>
-<!-- monke -->
-<script>
+<title style="font-size:69px">Monke Clicker</title>
 
-var count = 0
-var countButton=document.getElementById("countButton");
-var displayCount=document.getElementById("displayCount");
-countButton.onclick = function() {
-count++;
-displayCount.innerHTML = count;
-
-}
-if (count = 0) {
-const testElement = document.querySelector('div');
-const lineBreak = document.createElement('br');
-testElement.appendChild(lineBreak);
-}
-
-const button = document.querySelector('input[type="button"]');
-button.addEventListener('click', event => {
-
-   const othermonke = document.createElement("img");
-   othermonke.src = "https://i.imgur.com/Hw8PZK0.jpg";
-   othermonke.width = "35";
-   othermonke.height = "35";
-   othermonke.alt = "alttext";
-
-   button.parentElement.appendChild(othermonke);
-});
-
-	
-	</script>
 </head>
+
+<!------------------------------------------------------------Body------------------------------------------------------------>
+
 <body>
 
+
+	<h1 style="font-size:80px" id="monker">Welcome To Monke Clicker created by charlie</h1>
+	<h2 style="font-size:35px" id="monker2">Why is this website important? Why does it even exist? These are the questions I ask myself everyday. This website is useless. Leave while you can.</h5>
+	
+<div style="font-size:69px" id="divmonke">
+<input type="button" value="MONKE BUTTON" id="countButton" style="font-size:69px"/>
+Monke button was pressed - <span id="displayCount">0</span> - times
+</div>
+<nav id="navbar"></nav>
+<div id="divmonke2">
+</div>
+<div id="goback">
+</div>
+<a href="monke.html" id="secretButton">shh</a>
+  <script src="script.js"></script>
+  <script src="start.js"></script>
 </body>
+
+<!------------------------------------------------------------Body------------------------------------------------------------>
+
 </html>
