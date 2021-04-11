@@ -27,6 +27,8 @@ countButton.onclick = function(){
   monker.innerHTML = "69000. hehe boi. you should really stop now. is your autoclicker wearing out?"
   } else if (count===100000) {
   monker.innerHTML = "If you're still clicking, I honestly don't know what to say. Why are we still here... just to suffer."
+  } else if (count===690000) {
+  monker.innerHTML = "ajajajjajajajaj"
   } else if (count===1000000) {
   monker.innerHTML = "If you're not using an autoclicker you 100% have arthritis."
   } else if (count===1000000000) {
