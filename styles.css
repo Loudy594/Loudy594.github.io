@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "burbank";
+    src: url("fonts/BurbankBigCondensed-Black.otf");
+}
+
+@font-face {
+	font-family: "baloo";
+	src: url("fonts/Baloo-Regular.ttf");
+}
+
+
+h1 {
+	text-align:center;
+	-webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: white;
+	font-family:"baloo";
+}
+
+h2 {
+	font-family:"baloo";
+}
+
+body 
+{
+	background-color:coral;
+	background-image:"https://i.imgur.com/Hw8PZK0.jpg";
+}
+
+#countButton
+{
+	background-color:coral;
+	font-family:burbank;
+}
+
+#countButton:hover {
+	background:red;
+	transform:scale(1.02);
+}
+
+#divmonke {
+	font-family:baloo;
+}
+
+#secretButton
+{
+	position:absolute;
+	top:-0.10%;
+	left:98.8%;
+	text-decoration:none;
+	color:coral;
+}
+
+.active {
+	text-decoration:none;
+}
+
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
