@@ -1,10 +1,14 @@
-
-
+var shopButton = document.getElementById("shopBUtton");
 var secretButton = document.getElementById("secretButton");
 var countButton = document.getElementById("countButton");
 var displayCount = document.getElementById("displayCount");
 var goBack = document.getElementById("goBack");
 var count = 0;
+
+shopButton.onclick = function() {
+  var e = "monke"
+console.log(e)
+}
 
 secretButton.onclick = function() {
 
