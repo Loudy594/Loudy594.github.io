@@ -7,8 +7,7 @@ var goBack = document.getElementById("goBack");
 var count = 0;
 
 secretButton.onclick = function() {
-	var storeCount === count;
-	console.log(storeCount);
+
 }
 
 countButton.onclick = function(){
