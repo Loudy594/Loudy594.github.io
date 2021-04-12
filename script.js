@@ -45,5 +45,5 @@ button.addEventListener('click', event => {
 });
 
 window.onbeforeunload = function () {
-    return "Are you sure";
+    return "Are you sure you want to leave the worlds best game?";
 };
