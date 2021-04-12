@@ -5,6 +5,10 @@ var displayCount = document.getElementById("displayCount");
 var goBack = document.getElementById("goBack");
 var count = 0;
 
+window.onbeforeunload = function () {
+return ‘please save your setting before leaving the page’;
+}
+
 shopButton.onclick = function() {
     console.log("e");
 }
