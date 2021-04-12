@@ -1,11 +1,13 @@
-var shopButton = document.getElementById("shopBUtton");
+var shopButton = document.getElementById("shopButton");
 var secretButton = document.getElementById("secretButton");
 var countButton = document.getElementById("countButton");
 var displayCount = document.getElementById("displayCount");
 var goBack = document.getElementById("goBack");
 var count = 0;
 
-
+shopButton.onclick = function() {
+    console.log("e");
+}
 countButton.onclick = function() {
     count++;
     displayCount.innerHTML = count;
