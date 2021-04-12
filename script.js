@@ -6,8 +6,7 @@ var goBack = document.getElementById("goBack");
 var count = 0;
 
 shopButton.onclick = function() {
-  var e = "monke"
-console.log(e)
+console.log("e");
 }
 
 secretButton.onclick = function() {
