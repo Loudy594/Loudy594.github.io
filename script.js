@@ -5,13 +5,6 @@ var displayCount = document.getElementById("displayCount");
 var goBack = document.getElementById("goBack");
 var count = 0;
 
-shopButton.onclick = function() {
-    console.log("e");
-}
-
-secretButton.onclick = function() {
-
-}
 
 countButton.onclick = function() {
     count++;
