@@ -5,8 +5,14 @@ var displayCount = document.getElementById("displayCount");
 var goBack = document.getElementById("goBack");
 var count = 0;
 
-localStorage.setItem("displayCount");
-document.getElementById("displayCount").innerHTML = localStorage.getItem("displayCount");
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("displayCount");
+  // Retrieve
+  document.getElementById("displayCount").innerHTML = localStorage.getItem("displayCount");
+} else {
+  document.getElementById("h1").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
 
 shopButton.onclick = function() {
     
