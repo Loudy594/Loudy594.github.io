@@ -5,14 +5,12 @@ var displayCount = document.getElementById("displayCount");
 var goBack = document.getElementById("goBack");
 var count = 0;
 
-var testObject = { 'one': 1, 'two': 2, 'three': 3 };
-localStorage.setItem('testObject', JSON.stringify(testObject));
-var retrievedObject = localStorage.getItem('testObject');
-
 console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
 shopButton.onclick = function() {
-    
+    var testObject = { 'one': 1, 'two': 2, 'three': 3 };
+    localStorage.setItem('testObject', JSON.stringify(testObject));
+    var retrievedObject = localStorage.getItem('testObject');
 }
 countButton.onclick = function() {
     count++;
