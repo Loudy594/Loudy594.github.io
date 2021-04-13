@@ -7,12 +7,10 @@ var count = 0;
 
 
 shopButton.onclick = function() {
-    
-var testObject = document.getElementById("displayCount")
-localStorage.setItem('testObject', JSON.stringify(testObject));
-var retrievedObject = localStorage.getItem('testObject');
-console.log('retrievedObject: ', JSON.parse(retrievedObject));
-    
+   var shop = document.createElement("h5");
+var para = document.createElement("P");                       // Create a <p> node
+var t = document.createTextNode("This is a paragraph.");      // Create a text node
+para.appendChild(t);
 }
 countButton.onclick = function() {
     count++;
