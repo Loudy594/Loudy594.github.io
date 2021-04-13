@@ -5,8 +5,11 @@ var displayCount = document.getElementById("displayCount");
 var goBack = document.getElementById("goBack");
 var count = 0;
 
+localStorage.setItem("displayCount");
+document.getElementById("displayCount").innerHTML = localStorage.getItem("displayCount");
+
 shopButton.onclick = function() {
-    console.log("e");
+    
 }
 countButton.onclick = function() {
     count++;
