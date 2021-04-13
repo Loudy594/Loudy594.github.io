@@ -7,7 +7,7 @@ var count = 0;
 
 if (typeof(Storage) !== "undefined") {
   // Store
-  localStorage.setItem("displayCount");
+  localStorage.setItem("h1","displayCount");
   // Retrieve
   document.getElementById("displayCount").innerHTML = localStorage.getItem("displayCount");
 } else {
