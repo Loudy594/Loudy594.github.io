@@ -31,7 +31,7 @@ countButton.onclick = function() {
         monker.innerHTML = "If you're not using an autoclicker you 100% have arthritis."
     } else if (count === 1000000000) {
         monker.innerHTML = "bro... why are you still here? You've cilcked one billion times. Do you have nothing else to do with your life. You could be doing so much more with your life. You have serious issues."
-    } else if (count === 5) {
+    } else if (count === 1000000000000) {
         monker.innerHTML = "Even if you were to use an autoclicker at the speed of 0.1 milliseconds per click, it would take you 27777.77 hours to get this far, which is over 3 years. If you are not using an autoclicker, you have wasted your entire life, and probably the lives of your children and grandchildren who you have passed this game on to to continue clicking for ages. Or you have just bought a couple shop upgrades after a few hours. That's probably more likely. In that case, continue clicking."
     }
 }
