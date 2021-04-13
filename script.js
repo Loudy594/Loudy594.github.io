@@ -8,7 +8,7 @@ var count = 0;
 
 shopButton.onclick = function() {
     
-var testObject = { 'one': 1, 'two': 2, 'three': 3 };
+var testObject = document.getElementById("displayCount")
 localStorage.setItem('testObject', JSON.stringify(testObject));
 var retrievedObject = localStorage.getItem('testObject');
 console.log('retrievedObject: ', JSON.parse(retrievedObject));
