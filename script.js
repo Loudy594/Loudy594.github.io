@@ -5,14 +5,11 @@ var displayCount = document.getElementById("displayCount");
 var goBack = document.getElementById("goBack");
 var count = 0;
 
-if (typeof(Storage) !== "undefined") {
-  // Store
-  localStorage.setItem("h1","displayCount");
-  // Retrieve
-  document.getElementById("displayCount").innerHTML = localStorage.getItem("displayCount");
-} else {
-  document.getElementById("h1").innerHTML = "Sorry, your browser does not support Web Storage...";
-}
+var testObject = { 'one': 1, 'two': 2, 'three': 3 };
+localStorage.setItem('testObject', JSON.stringify(testObject));
+var retrievedObject = localStorage.getItem('testObject');
+
+console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
 shopButton.onclick = function() {
     
