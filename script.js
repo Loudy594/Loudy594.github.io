@@ -63,7 +63,7 @@ storageInput.addEventListener('input', letter => {
 })
 
 const saveToLocalStorage = () => {
-    localStorage.setItem('textinput', text.textContent
+    localStorage.setItem('textinput', text.textContent)
 }
 button2.addEventListener('click', saveToLcalStorage)
 
