@@ -51,7 +51,7 @@ button.addEventListener('click', event => {
 
 const storageInput = document.querySelector('.storage');
 const text = document.querySelector('.text');
-const button = document.querySelector('.button');
+const button2 = document.querySelector('.button');
 const storedInput = localStorage.getIteam('textinput')
 
 if(storageInput) {
@@ -65,7 +65,7 @@ storageInput.addEventListener('input', letter => {
 const saveToLocalStorage = () => {
     localStorage.setItem('textinput', text.textContent
 }
-button.addEventListener('click', saveToLcalStorage)
+button2.addEventListener('click', saveToLcalStorage)
 
 
 window.onbeforeunload = function () {
