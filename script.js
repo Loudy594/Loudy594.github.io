@@ -38,16 +38,7 @@ countButton.onclick = function() {
         monker.innerHTML = "Even if you were to use an autoclicker at the speed of 0.1 milliseconds per click, it would take you 27777.77 hours to get this far, which is over 3 years. If you are not using an autoclicker, you have wasted your entire life, and probably the lives of your children and grandchildren who you have passed this game on to to continue clicking for ages. Or you have just bought a couple shop upgrades after a few hours. That's probably more likely. In that case, continue clicking."
     }
 }
-const button = document.querySelector('input[type="button"]');
-button.addEventListener('click', event => {
-    const othermonke = document.createElement("img");
-    var monkepicture = "https://i.imgur.com/Hw8PZK0.jpg";
-    othermonke.src = monkepicture;
-    othermonke.width = "50";
-    othermonke.height = "50";
-    othermonke.alt = "alttext";
-    button.parentElement.appendChild(othermonke);
-});
+
 
 const storageInput = document.querySelector('.storage');
 const text = document.querySelector('.text');
@@ -65,7 +56,7 @@ storageInput.addEventListener('input', letter => {
 const saveToLocalStorage = () => {
     localStorage.setItem('textinput', text.textContent)
 }
-button2.addEventListener('click', saveToLcalStorage)
+button2.addEventListener('click', saveToLocalStorage)
 
 
 window.onbeforeunload = function () {
