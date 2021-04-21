@@ -52,7 +52,7 @@ button.addEventListener('click', event => {
 const storageInput = document.querySelector('.storage');
 const text = document.querySelector('.text');
 const button2 = document.querySelector('.button');
-const storedInput = localStorage.getIteam('textinput')
+const storedInput = localStorage.getItem('textinput')
 
 if(storageInput) {
 text.textContent = storedInput
