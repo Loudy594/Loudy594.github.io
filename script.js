@@ -10,6 +10,8 @@ shopButton.onclick = function() {
 
 }
 countButton.onclick = function() {
+    
+    
     count++;
     displayCount.innerHTML = count;
     if (count === 69) {
@@ -46,6 +48,25 @@ button.addEventListener('click', event => {
     othermonke.alt = "alttext";
     button.parentElement.appendChild(othermonke);
 });
+
+const storageInput = document.querySelector('.storage');
+const text = document.querySelector('.text');
+const button = document.querySelector('.button');
+const storedInput = localStorage.getIteam('textinput')
+
+if(storageInput) {
+text.textContent = storedInput
+}
+
+storageInput.addEventListener('input', letter => {
+    text.textContet = letter.target.value
+})
+
+const saveToLocalStorage = () => {
+    localStorage.setItem('textinput', text.textContent
+}
+button.addEventListener('click', saveToLcalStorage)
+
 
 window.onbeforeunload = function () {
     return "Are you sure you want to leave the worlds best game?";
