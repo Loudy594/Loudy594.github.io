@@ -17,8 +17,9 @@ countButton.onclick = function() {
     
     count++;
     displayCount.innerHTML = count;
+ 
   
-localStorage.setItem("test", displayCount);
+localStorage.setItem("test", count);
 document.getElementById("displayCount").innerHTML = localStorage.getItem("test");   
    
     if (count === 69) {
