@@ -41,14 +41,14 @@ function clickCounter() {
     } else {
       localStorage.clickcount = 1;
     }
-    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+    document.getElementById("result").innerHTML = "Monke button was pressed" + localStorage.clickcount + "times";
   } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
   }
 }
 </script>
       
-      <p><button onclick="clickCounter()" type="button" id="countButton" style="font-size:69px">Monke button was pressed - <span id="displayCount">0</span> - times</button></p>
+      <p><button onclick="clickCounter()" type="button" id="countButton" style="font-size:69px"></button></p>
       
 <div id="result"></div>
       
