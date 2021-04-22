@@ -10,8 +10,6 @@ shopButton.onclick = function() {
 displayCount.innerHtml = count-100
 }
 
-localStorage.setItem("lastname", "Smith");
-
 
 /*document.getElementById("result").innerHTML = localStorage.getItem("lastname");*/
 countButton.onclick = function() {
@@ -19,6 +17,10 @@ countButton.onclick = function() {
     
     count++;
     displayCount.innerHTML = count;
+  
+localStorage.setItem("test", displayCount);
+document.getElementById("displayCount").innerHTML = localStorage.getItem("test");   
+   
     if (count === 69) {
         monker.innerHTML = "You have reached 69. Noice."
     } else if (count === 1000) {
