@@ -7,7 +7,7 @@ var count = 0;
 
 
 shopButton.onclick = function() {
-
+displayCount.innerHtml = count-100
 }
 countButton.onclick = function() {
     
