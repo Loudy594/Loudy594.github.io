@@ -9,6 +9,11 @@ var count = 0;
 shopButton.onclick = function() {
 displayCount.innerHtml = count-100
 }
+
+localStorage.setItem("lastname", "Smith");
+
+
+/*document.getElementById("result").innerHTML = localStorage.getItem("lastname");*/
 countButton.onclick = function() {
     
     
