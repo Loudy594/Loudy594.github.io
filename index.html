@@ -32,10 +32,31 @@
       <h1 style="font-size:40px" id="monker">Welcome To Monke Clicker created by charlie</h1>
       <h2 style="font-size:17px" id="monker2">
       Why is this website important? Why does it even exist? These are the questions I ask myself everyday. This website is useless. Leave while you can.</h5>
+   
+  <script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+      
+      <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+      
+<div id="result"></div>
+      
       <div style="font-size:34px" id="divmonke">
          <input type="button" value="MONKE BUTTON" id="countButton" style="font-size:69px"/>
          Monke button was pressed - <span id="displayCount">0</span> - times
       </div>
+      
       <nav id="navbar"></nav>
       <div id="divmonke2"></div>
       <div id="goback"></div>
