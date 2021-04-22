@@ -45,23 +45,7 @@ countButton.onclick = function() {
 }
 
 
-const storageInput = document.querySelector('.storage');
-const text = document.querySelector('.text');
-const button2 = document.querySelector('.button');
-const storedInput = localStorage.getItem('textinput')
 
-if(storageInput) {
-text.textContent = storedInput
-}
-
-storageInput.addEventListener('input', letter => {
-    text.textContet = letter.target.value
-})
-
-const saveToLocalStorage = () => {
-    localStorage.setItem('textinput', text.textContent)
-}
-button2.addEventListener('click', saveToLocalStorage)
 
 
 window.onbeforeunload = function () {
