@@ -2,6 +2,7 @@ var shopButton = document.getElementById("shopButton");
 var secretButton = document.getElementById("secretButton");
 var countButton = document.getElementById("countButton");
 var displayCount = document.getElementById("displayCount");
+var displayCount2 = document.getElementById("displayCount").textContent;
 var goBack = document.getElementById("goBack");
 var count = 0;
 
@@ -19,7 +20,7 @@ countButton.onclick = function() {
     displayCount.innerHTML = count;
  
   
-localStorage.setItem("test", count);
+localStorage.setItem("test", displayCount2);
 document.getElementById("displayCount").innerHTML = localStorage.getItem("test");   
    
     if (count === 69) {
