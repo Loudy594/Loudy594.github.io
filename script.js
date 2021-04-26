@@ -1,18 +1,28 @@
+window.onload = function() {
+    document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
+}
+
 var shopButton = document.getElementById("shopButton");
 var secretButton = document.getElementById("secretButton");
+var countButton = document.getElementById("countButton");
+var displayCount = document.getElementById("displayCount");
+var displayCount2 = document.getElementById("displayCount").textContent;
 var goBack = document.getElementById("goBack");
+var resetButton = document.getElementById("resetButton")
 var count = 0;
 
 
-shopButton.onclick = function() {
-displayCount.innerHtml = localStorage.clickcount-100
+shopButton.onclick = function () {
+    displayCount.innerHtml = localStorage.clickcount - 100
 }
 
+resetButton.onclick = 
 
 /*document.getElementById("result").innerHTML = localStorage.getItem("lastname");*/
-countButton.onclick = function() {
-   
+countButton.onclick = function () {
 
+
+var losClick = localStorage.getItem('clickcount')
     if (localStorage.clickcount === 69) {
         monker.innerHTML = "You have reached 69. Noice."
     } else if (localStorage.clickcount === 1000) {
