@@ -52,14 +52,10 @@
       }
 
 
-        var getItem = JSON.parse(window.localStorage.getItem('clickcount'))
-        console.log(getItem)
-
-
+var getItem = parseInt(window.localStorage.getItem('clickcount'));
       if (getItem === 69) {
-        console.log("e")
-        monker.innerHTML = "You have reached 69. Noice."
-      } else if (localStorage.clickcount === 1000) {
+       monker.innerHTML = "You have reached 69. Noice."
+      }  else if (localStorage.clickcount === 1000) {
         monker.innerHTML = "Wow. You're still here. Impressive!"
       } else if (localStorage.clickcount === 6900) {
         monker.innerHTML = "Congrats on getting 6900. Why are you still playing this again?"
