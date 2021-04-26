@@ -31,7 +31,7 @@
 <!------------------------------------------------------------Body------------------------------------------------------------>
 
 <body>
-  <button id="shopButton">Shop</button>
+  <button id="shopButton" onclick="shopButtonClick();">Shop</button>
   <h1 style="font-size:40px" id="monker">Welcome To Monke Clicker created by charlie</h1>
   <h2 style="font-size:17px" id="monker2">
     Why is this website important? Why does it even exist? These are the questions I ask myself everyday. This website
@@ -51,35 +51,61 @@
         }
       }
 
+      function shopButtonClick() {
 
-var getItem = parseInt(window.localStorage.getItem('clickcount'));
-    console.log(getItem);
-      if (getItem === 69) {
-       monker.innerHTML = "You have reached 69. Noice."
-      }  else if (localStorage.clickcount === 1000) {
+        var subtractionLocalStorage = parseInt(window.localStorage.getItem('clickcount')) +5;
+        var subtractionFromMonke = parseInt(window.localStorage.getItem('clickcount')) -100;
+        var getItem2 = parseInt(window.localStorage.getItem('clickcount')); 
+
+        if (getItem2 < 100) {
+          alert('You cannot buy that! You need 100 monkes for this upgrade!')
+          var detectTrue2 = false;
+        } else if (getItem2 >= 100) {
+          localStorage.clickcount = subtractionFromMonke;
+          document.getElementById("result").innerHTML = "Monke button was pressed " + subtractionFromMonke + " times";
+          var detectTrue = true;
+          console.log(detectTrue)
+        }
+      }
+
+      function clickCounter2() {
+        var getItem = parseInt(window.localStorage.getItem('clickcount')); 
+        var subtractionLocalStorage = parseInt(window.localStorage.getItem('clickcount')) +5;
+
+        if (detectTrue = true) {
+          localStorage.clickcount = subtractionLocalStorage;
+          document.getElementById('result').innerHTML = "Monke button was pressed " + subtractionLocalStorage + " times"
+        }
+
+        if (getItem === 69) {
+        monker.innerHTML = "You have reached 69. Noice."
+      } else if (getItem === 1000) {
         monker.innerHTML = "Wow. You're still here. Impressive!"
-      } else if (localStorage.clickcount === 6900) {
+      } else if (getItem === 6900) {
         monker.innerHTML = "Congrats on getting 6900. Why are you still playing this again?"
-      } else if (localStorage.clickcount === 10000) {
+      } else if (getItem === 10000) {
         monker.innerHTML = "10000. Almost as high as my chess elo."
-      } else if (localStorage.clickcount === 50000) {
+      } else if (getItem === 50000) {
         monker.innerHTML = "50000. Jesus. You are on the verge of becoming a monke no-life"
-      } else if (localStorage.clickcount === 69000) {
+      } else if (getItem === 69000) {
         monker.innerHTML = "69000. hehe boi. you should really stop now. is your autoclicker wearing out?"
-      } else if (localStorage.clickcount === 100000) {
+      } else if (getItem === 100000) {
         monker.innerHTML = "If you're still clicking, I honestly don't know what to say. Why are we still here... just to suffer."
-      } else if (localStorage.clickcount === 690000) {
+      } else if (getItem === 690000) {
         monker.innerHTML = "ajajajjajajajaj"
-      } else if (localStorage.clickcount === 1000000) {
+      } else if (getItem === 1000000) {
         monker.innerHTML = "If you're not using an autoclicker you 100% have arthritis."
-      } else if (localStorage.clickcount === 1000000000) {
+      } else if (getItem === 1000000000) {
         monker.innerHTML = "bro... why are you still here? You've cilcked one billion times. Do you have nothing else to do with your life. You could be doing so much more with your life. You have serious issues."
-      } else if (localStorage.clickcount === 1000000000000) {
+      } else if (getItem === 1000000000000) {
         monker.innerHTML = "Even if you were to use an autoclicker at the speed of 0.1 milliseconds per click, it would take you 27777.77 hours to get this far, which is over 3 years. If you are not using an autoclicker, you have wasted your entire life, and probably the lives of your children and grandchildren who you have passed this game on to to continue clicking for ages. Or you have just bought a couple shop upgrades after a few hours. That's probably more likely. In that case, continue clicking."
       }
+      } 
+ 
     </script>
 
-<input type="image" src="images/monkebutton.png" alt="monkebutton" width="300" height="100" onclick="clickCounter()" type="button" id="countButton"/>
+    <input type="image" src="images/3235.jpg" alt="monkebutton" width="150" height="150"
+      onclick="clickCounter(); clickCounter2()" type="button" id="countButton" />
 
 
     <div id="result"></div>
@@ -97,10 +123,6 @@ var getItem = parseInt(window.localStorage.getItem('clickcount'));
     <nav id="navbar"></nav>
     <div id="divmonke2"></div>
     <div id="goback"></div>
-
-
-
-    <img src="images/3235.jpg" alt="monke" width="500" height="600">
 
 
     <script src="script.js"></script>
