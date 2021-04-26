@@ -51,8 +51,10 @@
         }
       }
 
-      var getItem = JSON.parse(window.localStorage.getItem('clickcount'));
-      console.log(getItem)
+
+        var getItem = JSON.parse(window.localStorage.getItem('clickcount'))
+        console.log(getItem)
+
 
       if (getItem === 69) {
         console.log("e")
@@ -80,7 +82,7 @@
       }
     </script>
 
-<input type="image" src="images/monkebutton.png" alt="monkebutton" width="650" height="200" onclick="clickCounter()" type="button" id="countButton"/>
+<input type="image" src="images/monkebutton.png" alt="monkebutton" width="300" height="100" onclick="clickCounter()" type="button" id="countButton"/>
 
 
     <div id="result"></div>
