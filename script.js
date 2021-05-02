@@ -1,4 +1,4 @@
-window.onload = function () {
+window.onload = function() {
     document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
 
     parseInt(localStorage.getItem('clickcount'))
@@ -32,7 +32,7 @@ function saveCount() {
     var save = {
         cursors: cursors
     }
-    localStorage.setItem("save",JSON.stringify(save));
+    localStorage.setItem("save", JSON.stringify(save));
 }
 
 function loadCount() {
@@ -62,34 +62,34 @@ var cursors = 0;
 
 function buyCursor() {
 
-  //  document.getElementById('cursors').innerHTML = JSON.parse(localStorage.getItem('save')).cursors
+    //  document.getElementById('cursors').innerHTML = JSON.parse(localStorage.getItem('save')).cursors
 
-    var cursorCost = Math.floor(10 * Math.pow(1.1, cursors));     //works out the cost of this cursor
+    var cursorCost = Math.floor(10 * Math.pow(1.1, cursors));
 
     if (localStorage.clickcount < cursorCost) {
         alert('You do not have enough monkes to buy this!')
-    } else if (localStorage.clickcount >= cursorCost) {                                   //checks that the player can afford the cursor
-        cursors = cursors + 1;                                   //increases number of cursors
+    } else if (localStorage.clickcount >= cursorCost) {
+        cursors = cursors + 1;
 
 
-        localStorage.clickcount = localStorage.clickcount - cursorCost;                          //removes the cookies spent
-        document.getElementById('cursors').innerHTML = cursors;  //updates the number of cursors for the user
-        document.getElementById('result').innerHTML = "Monke button was pressed " + localStorage.clickcount + " times" //updates the number of cookies for the user
+        localStorage.clickcount = localStorage.clickcount - cursorCost;
+        document.getElementById('cursors').innerHTML = cursors;
+        document.getElementById('result').innerHTML = "Monke button was pressed " + localStorage.clickcount + " times"
 
-        window.setInterval(function () {
+        window.setInterval(function() {
 
             clickCounter(cursors);
-    
+
         }, 1000);
 
     };
-    var nextCost = Math.floor(10 * Math.pow(1.1, cursors));       //works out the cost of the next cursor
+    var nextCost = Math.floor(10 * Math.pow(1.1, cursors));
 
-    document.getElementById('cursorCost').innerHTML = cursorCost;  //updates the cursor cost for the user
+    document.getElementById('cursorCost').innerHTML = cursorCost;
 
 };
 
 
-window.onbeforeunload = function () {
+window.onbeforeunload = function() {
     return "Are you sure you want to leave the worlds best game?";
 };
