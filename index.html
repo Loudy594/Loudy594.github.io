@@ -4,16 +4,7 @@
 <head>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script data-ad-client="ca-pub-4213019681003520" async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W73XP05V9H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'G-W73XP05V9H');
-  </script>
   <link rel="stylesheet" href="styles.css">
   <meta charset="utf-8">
   <meta name="description" content="A monke clicker">
@@ -24,10 +15,9 @@
   <meta property="og:title" content="monke">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://loudy594.github.io">
-  <meta property="og:image" content="/images/pigomn2.png">
   <title style="font-size:69px">Monke Clicker</title>
 </head>
-<link rel="shortcut icon" href="/images/pigomn2.png" />
+<link rel="shortcut icon" href="images\pigomn2.png" />
 <!------------------------------------------------------------Body------------------------------------------------------------>
 
 <body>
@@ -37,88 +27,24 @@
     Why is this website important? Why does it even exist? These are the questions I ask myself everyday. This website
     is useless. Leave while you can.</h5>
 
-    <script>
-      function clickCounter() {
-        if (typeof (Storage) !== "undefined") {
-          if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount) + 1;
-          } else {
-            localStorage.clickcount = 1;
-          }
-          document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
-        } else {
-          document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-        }
-      }
 
-      function shopButtonClick() {
-
-        var subtractionLocalStorage = parseInt(window.localStorage.getItem('clickcount')) +5;
-        var subtractionFromMonke = parseInt(window.localStorage.getItem('clickcount')) -100;
-        var getItem2 = parseInt(window.localStorage.getItem('clickcount')); 
-
-        if (getItem2 < 100) {
-          alert('You cannot buy that! You need 100 monkes for this upgrade!')
-          var detectTrue2 = false;
-        } else if (getItem2 >= 100) {
-          localStorage.clickcount = subtractionFromMonke;
-          document.getElementById("result").innerHTML = "Monke button was pressed " + subtractionFromMonke + " times";
-          var detectTrue = true;
-          console.log(detectTrue)
-        }
-      }
-
-      function clickCounter2() {
-        var getItem = parseInt(window.localStorage.getItem('clickcount')); 
-        var subtractionLocalStorage = parseInt(window.localStorage.getItem('clickcount')) +5;
-
-        if (detectTrue = true) {
-          localStorage.clickcount = subtractionLocalStorage;
-          document.getElementById('result').innerHTML = "Monke button was pressed " + subtractionLocalStorage + " times"
-        }
-
-        if (getItem === 69) {
-        monker.innerHTML = "You have reached 69. Noice."
-      } else if (getItem === 1000) {
-        monker.innerHTML = "Wow. You're still here. Impressive!"
-      } else if (getItem === 6900) {
-        monker.innerHTML = "Congrats on getting 6900. Why are you still playing this again?"
-      } else if (getItem === 10000) {
-        monker.innerHTML = "10000. Almost as high as my chess elo."
-      } else if (getItem === 50000) {
-        monker.innerHTML = "50000. Jesus. You are on the verge of becoming a monke no-life"
-      } else if (getItem === 69000) {
-        monker.innerHTML = "69000. hehe boi. you should really stop now. is your autoclicker wearing out?"
-      } else if (getItem === 100000) {
-        monker.innerHTML = "If you're still clicking, I honestly don't know what to say. Why are we still here... just to suffer."
-      } else if (getItem === 690000) {
-        monker.innerHTML = "ajajajjajajajaj"
-      } else if (getItem === 1000000) {
-        monker.innerHTML = "If you're not using an autoclicker you 100% have arthritis."
-      } else if (getItem === 1000000000) {
-        monker.innerHTML = "bro... why are you still here? You've cilcked one billion times. Do you have nothing else to do with your life. You could be doing so much more with your life. You have serious issues."
-      } else if (getItem === 1000000000000) {
-        monker.innerHTML = "Even if you were to use an autoclicker at the speed of 0.1 milliseconds per click, it would take you 27777.77 hours to get this far, which is over 3 years. If you are not using an autoclicker, you have wasted your entire life, and probably the lives of your children and grandchildren who you have passed this game on to to continue clicking for ages. Or you have just bought a couple shop upgrades after a few hours. That's probably more likely. In that case, continue clicking."
-      }
-      } 
- 
-    </script>
-
-    <input type="image" src="images/3235.jpg" alt="monkebutton" width="150" height="150"
-      onclick="clickCounter(); clickCounter2()" type="button" id="countButton" />
+    <input type="image" src="images/3235.jpg" alt="monkebutton" width="150" height="150" onclick="clickCounter();"
+      type="button" id="countButton" />
 
 
     <div id="result"></div>
+  <br>
+    <button onclick="resetButton()" type="button" id="resetButton" class="order" style="font-size:20px">Reset</button> 
+    <button onclick="saveCount()" id="save" class="order" style="font-size:20px">Save Cursors</button> 
+    <button onclick="loadCount()" id="load" class="order" style="font-size:20px">Load Cursors</button>
+    <br> <br> <br> <br> 
 
-    <script>
-      function resetButton() {
-        alert("Click Count Has Been Removed")
-        localStorage.removeItem('clickcount')
-        document.getElementById("result").innerHTML = "Monke button was pressed " + 0 + " times";
-        monker.innerHTMl = "Welcome To Monke Clicker created by charlie"
-      }
-    </script>
-    <button onclick="resetButton()" type="button" id="resetButton" style="font-size:20px">Reset</button>
+
+    <button onclick="buyCursor()" id="buy">Buy Cursor</button>
+		<br />
+		Cursors: <span id="cursors">0</span>
+		<br />
+		Cursor Cost: <span id="cursorCost">10</span>
 
     <nav id="navbar"></nav>
     <div id="divmonke2"></div>
