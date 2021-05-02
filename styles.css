@@ -17,28 +17,101 @@
 }
  body {
      background-color:coral;
-     background-image:"https://i.imgur.com/Hw8PZK0.jpg";
+     font-family:baloo;
 }
+
+#result {
+     font-family:baloo;
+     color:rgb(0, 0, 0);
+     outline-width: 5px;
+}
+
  #countButton {
      background-color:coral;
      font-family:burbank;
+     border-radius: 50px;
 }
  #countButton:hover {
-     transform:scale(1.02);
+     transform:scale(1.05);
 }
- #divmonke {
+#resetButton {
+     font-family:baloo;
+     border-radius: 50px;
+     left:10%;
+	text-align: justify;
+	font-weight: lighter;
+	line-height: 25px;
+	float:left;
+	padding-left: 20px;
+	padding-right: 20px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+	font-size:20px;
+}
+#resetButton:hover {
+     transform:scale(1.05);
+}
+#save {
+     font-family:baloo;
+     border-radius: 50px;
+     left:10%;
+	text-align: justify;
+	font-weight: lighter;
+	line-height: 25px;
+	float:left;
+	padding-left: 20px;
+	padding-right: 20px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+	font-size:20px;
+}
+#save:hover {
+     transform:scale(1.05);
+}
+#load {
+     font-family:baloo;
+     border-radius: 50px;
+     left:10%;
+	text-align: justify;
+	font-weight: lighter;
+	line-height: 25px;
+	float:left;
+	padding-left: 20px;
+	padding-right: 20px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+	font-size:20px;
+}
+#load:hover {
+     transform:scale(1.05);
+}
+
+#buy {
+     background-color:coral;
+     font-family:baloo;
+     border-radius: 50px;
+}
+#buy:hover {
+     transform:scale(1.05);
+}
+
+#cursors {
      font-family:baloo;
 }
- #secretButton {
-     position:absolute;
-     top:-0.10%;
-     left:98.8%;
-     text-decoration:none;
-     color:coral;
+
+#cursorCost {
+     font-family:baloo;
 }
- .active {
-     text-decoration:none;
-}
- .disable-dbl-tap-zoom {
-     touch-action: manipulation;
+
+.order {
+     background-color: rgb(245, 135, 144);
+     width:max-content;
+     word-spacing: 10%;
+	text-align: justify;
+	font-weight: lighter;
+	line-height: 25px;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size:20px;
 }
