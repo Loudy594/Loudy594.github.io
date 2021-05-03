@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Baloo+Tamma';
 
 @font-face {
      font-family: "burbank";
@@ -25,6 +26,11 @@
  h2 {
      font-family:"baloo";
 }
+
+html {
+     cursor: crosshair;
+}
+
 body {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
@@ -61,7 +67,7 @@ body {
 }
 #resetButton {
      background-color:coral;
-     position: fixed;
+     position: absolute;
      left: 180px;
      top: 280px;
      font-family:baloo;
@@ -110,17 +116,31 @@ body {
 }
 
 #buy {
-     background-color:coral;
-     position: fixed;
+     background: #e6373a;
+     opacity: 1;
+     border-radius: 3px;
+     box-shadow: 0 3px 0px 0px #a31417;
+     transition: all .2s ease;
+     outline-style: none;
+     width: 168px;
+     height: 50px;
+     font-size: 30px;
+     position: absolute;
      left: 180px;
      top: 200px;
-     font-family:baloo;
-     border-radius: 50px;
-     border-color: black;  
-     font-size:30px;  
-     width: 166px;
-     height: 50px;
-     text-align: center; 
+     font-family: 'Baloo Tamma', cursive;
+}
+#buy:hover, #buy:focus {
+     transform: translateY(-2px);
+     box-shadow: 0 5px 0px 0px #a31417;
+     font-family: 'Baloo Tamma', cursive;
+}
+
+#buy:active {
+     background: #a31417;
+     box-shadow: 0 0 0 0 #48090a;
+     transform: translateY(3px);
+     font-family: 'Baloo Tamma', cursive;
 }
 #buy:hover {
      transform:scale(1.05);
@@ -128,7 +148,7 @@ body {
 
 #divcursor {
      font-family:baloo;
-     position: fixed;
+     position: absolute;
      left: 370px;
      top: 200px;
      font-size: 30px;
@@ -146,4 +166,8 @@ body {
 	padding-left: 20px;
 	padding-right: 20px;
 	font-size:20px;
+}
+
+#result {
+     font-size:30px;
 }
