@@ -59,8 +59,7 @@ body {
      background-color:coral;
      font-family:burbank;
      border-radius: 50px;
-     border-style: solid;
-     border-color: black; 
+     border:0;
 }
  #countButton:hover {
      transform:scale(1.05);
@@ -121,7 +120,6 @@ body {
      border-radius: 3px;
      box-shadow: 0 3px 0px 0px #a31417;
      transition: all .2s ease;
-     outline-style: none;
      width: 168px;
      height: 50px;
      font-size: 30px;
@@ -129,6 +127,7 @@ body {
      left: 180px;
      top: 200px;
      font-family: 'Baloo Tamma', cursive;
+     border:0;
 }
 #buy:hover, #buy:focus {
      transform: translateY(-2px);
