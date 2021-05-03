@@ -40,7 +40,6 @@ function loadCount() {
 }
 
 function resetButton() {
-    alert("Click Count Has Been Removed")
     parseInt(localStorage.getItem('clickcount'))
 
     localStorage.clickcount = 0
