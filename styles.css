@@ -59,58 +59,11 @@ body {
      font-family:burbank;
      border-radius: 50px;
      border:0;
+     cursor: crosshair;
 }
  #countButton:hover {
      transform:scale(1.05);
-}
-#resetButton {
-     background-color:coral;
-     position: absolute;
-     left: 180px;
-     top: 280px;
-     font-family:baloo;
-     border-radius: 50px;
-     border-color: black; 
-     font-size: 30px;   
-     width: 166px;
-     height: 50px;
-     text-align: center;
-}
-#resetButton:hover {
-     transform:scale(1.05);
-}
-#save {
-     font-family:baloo;
-     border-radius: 50px;
-     left:10%;
-	text-align: justify;
-	font-weight: lighter;
-	line-height: 25px;
-	float:left;
-	padding-left: 20px;
-	padding-right: 20px;
-     padding-top: 20px;
-     padding-bottom: 20px;
-}
-#save:hover {
-     transform:scale(1.05);
-}
-#load {
-     font-family:baloo;
-     border-radius: 50px;
-     left:10%;
-	text-align: justify;
-	font-weight: lighter;
-	line-height: 25px;
-	float:left;
-	padding-left: 20px;
-	padding-right: 20px;
-     padding-top: 20px;
-     padding-bottom: 20px;
-	font-size:20px;
-}
-#load:hover {
-     transform:scale(1.05);
+     cursor: crosshair;
 }
 
 #buy {
@@ -127,11 +80,13 @@ body {
      top: 200px;
      font-family: 'Baloo Tamma', cursive;
      border:0;
+     cursor: crosshair;
 }
 #buy:hover, #buy:focus {
      transform: translateY(-2px);
      box-shadow: 0 5px 0px 0px #a31417;
      font-family: 'Baloo Tamma', cursive;
+     cursor: crosshair;
 }
 
 #buy:active {
@@ -139,6 +94,7 @@ body {
      box-shadow: 0 0 0 0 #48090a;
      transform: translateY(3px);
      font-family: 'Baloo Tamma', cursive;
+     cursor: crosshair;
 }
 
 
@@ -149,6 +105,7 @@ body {
      top: 200px;
      font-size: 20px;
      font-family: Varela;
+     cursor: crosshair;
 }
 
 #bananacursor {
@@ -158,6 +115,7 @@ body {
      top: 280px;
      font-size: 20px;
      font-family: Varela;
+     cursor: crosshair;
 }
 
 #buyBanana {
@@ -174,11 +132,13 @@ body {
      top: 280px;
      font-family: 'Baloo Tamma', cursive;
      border:0;
+     cursor: crosshair;
 }
 #buyBanana:hover, #buyBanana:focus {
      transform: translateY(-2px);
      box-shadow: 0 5px 0px 0px #a31417;
      font-family: 'Baloo Tamma', cursive;
+     cursor: crosshair;
 }
 
 #buyBanana:active {
@@ -186,6 +146,7 @@ body {
      box-shadow: 0 0 0 0 #48090a;
      transform: translateY(3px);
      font-family: 'Baloo Tamma', cursive;
+     cursor: crosshair;
 }
 
 .order {
@@ -199,8 +160,10 @@ body {
 	padding-left: 20px;
 	padding-right: 20px;
 	font-size:20px;
+     cursor: crosshair;
 }
 
 #result {
      font-size:30px;
+     cursor: crosshair;
 }
