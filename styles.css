@@ -124,7 +124,7 @@ body {
      height: 50px;
      font-size: 30px;
      position: absolute;
-     left: 180px;
+     left: 1500px;
      top: 200px;
      font-family: 'Baloo Tamma', cursive;
      border:0;
@@ -141,17 +141,52 @@ body {
      transform: translateY(3px);
      font-family: 'Baloo Tamma', cursive;
 }
-#buy:hover {
-     transform:scale(1.05);
-}
+
 
 #divcursor {
      font-family:baloo;
      position: absolute;
-     left: 370px;
+     left: 1020px;
      top: 200px;
-     font-size: 30px;
+     font-size: 20px;
      font-family: Varela;
+}
+
+#bananacursor {
+     font-family:baloo;
+     position: absolute;
+     left: 1020px;
+     top: 280px;
+     font-size: 20px;
+     font-family: Varela;
+}
+
+#buyBanana {
+     background: #e6373a;
+     opacity: 1;
+     border-radius: 3px;
+     box-shadow: 0 3px 0px 0px #a31417;
+     transition: all .2s ease;
+     width: 180px;
+     height: 50px;
+     font-size: 30px;
+     position: absolute;
+     left: 1500px;
+     top: 280px;
+     font-family: 'Baloo Tamma', cursive;
+     border:0;
+}
+#buyBanana:hover, #buyBanana:focus {
+     transform: translateY(-2px);
+     box-shadow: 0 5px 0px 0px #a31417;
+     font-family: 'Baloo Tamma', cursive;
+}
+
+#buyBanana:active {
+     background: #a31417;
+     box-shadow: 0 0 0 0 #48090a;
+     transform: translateY(3px);
+     font-family: 'Baloo Tamma', cursive;
 }
 
 .order {
