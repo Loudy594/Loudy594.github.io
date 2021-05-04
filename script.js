@@ -4,9 +4,25 @@ function clickCounter() {
     } else {
         localStorage.clickcount = 1;
     }
-    document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
+    document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.kNum + " times";
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var click = parseInt(localStorage.clickcount)
+
+function numFormatter(click) {
+
+    if(click > 999 && click < 1000000){
+        return (click/1000).toFixed(0) + 'K'; // convert to K for number from > 1000 < 1 million 
+    }else if(click > 1000000){
+        return (click/1000000).toFixed(0) + 'M'; // convert to M for number from > 1 million 
+    }else if(click < 900){
+        localStorage.setItem('kNum', localStorage.clickcount); // if value < 1000, nothing to do
+    }
+}
+
+
+
+
 if (localStorage.cursors == null) {
     var cursors = 0
     localStorage.setItem('cursors', cursors)
@@ -44,7 +60,7 @@ function buyCursor() {
         localStorage.clickcount = localStorage.clickcount - cursorCost;
         document.getElementById('cursors').innerHTML = cursorCount;
         document.getElementById('cursorCost').innerHTML = cursorCount;
-        document.getElementById('result').innerHTML = "Monke button was pressed " + localStorage.clickcount + " times"
+        document.getElementById('result').innerHTML = "Monke button was pressed " + localStorage.kNum + " times"
 
         window.setInterval(function () {
             clickCounter(cursorCount);
@@ -96,7 +112,7 @@ function buyBanana() {
         localStorage.clickcount = localStorage.clickcount - bananaCost;
         document.getElementById('banana').innerHTML = bananaCount;
         document.getElementById('bananaCost').innerHTML = bananaCost;   
-        document.getElementById('result').innerHTML = "Monke button was pressed " + localStorage.clickcount + " times"
+        document.getElementById('result').innerHTML = "Monke button was pressed " + localStorage.kNum + " times"
 
         window.setInterval(function () {
             clickCounter(bananaCount);
@@ -129,7 +145,6 @@ function buyMultipleCursors() {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 window.onload = function () {
 
-    document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
 
     parseInt(localStorage.getItem('clickcount'))
 
@@ -138,22 +153,31 @@ window.onload = function () {
 
     for (var i = 0; i < cursorCount; i++) {
         window.setInterval(function () {
+            
             clickCounter(cursorCount);
 
         }, 1000);
     }
-
     document.getElementById('banana').innerHTML = bananaCount
     document.getElementById('bananaCost').innerHTML = bananaCost
 
     for (var i = 0; i < bananaCount; i++) {
         window.setInterval(function () {
-
             clickCounter(bananaCount);
 
         }, 250);
     }
 
+    for (var i = 0; i < 1; i++) {
+        window.setInterval(function () {
+            var click = parseInt(localStorage.clickcount)
+            console.log(click)
+            const kNum = numFormatter(click);
+            console.log(kNum)
+            localStorage.setItem('kNum', kNum)
+        }, 250);
+    }
+    document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.kNum + " times";
 }
 
 window.onbeforeunload = function () {
