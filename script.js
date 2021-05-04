@@ -43,6 +43,7 @@ function buyCursor() {
 
         localStorage.clickcount = localStorage.clickcount - cursorCost;
         document.getElementById('cursors').innerHTML = cursorCount;
+        document.getElementById('cursorCost').innerHTML = cursorCount;
         document.getElementById('result').innerHTML = "Monke button was pressed " + localStorage.clickcount + " times"
 
         window.setInterval(function () {
@@ -94,6 +95,7 @@ function buyBanana() {
 
         localStorage.clickcount = localStorage.clickcount - bananaCost;
         document.getElementById('banana').innerHTML = bananaCount;
+        document.getElementById('bananaCost').innerHTML = bananaCost;   
         document.getElementById('result').innerHTML = "Monke button was pressed " + localStorage.clickcount + " times"
 
         window.setInterval(function () {
