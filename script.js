@@ -171,9 +171,7 @@ window.onload = function () {
     for (var i = 0; i < 1; i++) {
         window.setInterval(function () {
             var click = parseInt(localStorage.clickcount)
-            console.log(click)
             const kNum = numFormatter(click);
-            console.log(kNum)
             localStorage.setItem('kNum', kNum)
         }, 250);
     }
