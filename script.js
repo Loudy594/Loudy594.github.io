@@ -1,17 +1,3 @@
-
-
-function update() {
-
-}
-
-var autoClick = 0;
-
-function timer() {
-    localStorage.clickcount = localStorage.clickcount + autoClick;
-    update()
-}
-
-
 function clickCounter() {
     if (localStorage.clickcount) {
         localStorage.clickcount = Number(localStorage.clickcount) + 1;
@@ -20,23 +6,7 @@ function clickCounter() {
     }
     document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
 }
-
-function saveCount() {
-    var save = {
-        cursors: cursors
-    }
-    localStorage.setItem("save", JSON.stringify(save));
-}
-
-function loadCount() {
-
-}
-
-
-function shopButtonClick() {
-
-}
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (localStorage.cursors == null) {
     var cursors = 0
     localStorage.setItem('cursors', cursors)
@@ -55,7 +25,7 @@ if (localStorage.cursorCost == null) {
 
 var cursorCost = parseInt(localStorage.cursorCost)
 var cursorCount = parseInt(localStorage.getItem('cursors'))
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function buyCursor() {
 
     //  document.getElementById('cursors').innerHTML = JSON.parse(localStorage.getItem('save')).cursors
@@ -86,7 +56,7 @@ function buyCursor() {
     document.getElementById('cursorCost').innerHTML = cursorCost;
 
 };
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 if (localStorage.bananas == null) {
     var bananas = 0
@@ -106,7 +76,7 @@ if (localStorage.bananaCost == null) {
 
 var bananaCost = parseInt(localStorage.bananaCost)
 var bananaCount = parseInt(localStorage.getItem('bananas'))
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function buyBanana() {
 
     //  document.getElementById('cursors').innerHTML = JSON.parse(localStorage.getItem('save')).cursors
@@ -137,6 +107,7 @@ function buyBanana() {
     document.getElementById('bananaCost').innerHTML = bananaCost;
 
 };
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*
 function buyMultipleCursors() {
     parseInt(localStorage.clickcount)
@@ -153,7 +124,7 @@ function buyMultipleCursors() {
     }
 }
  */
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 window.onload = function () {
 
     document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
@@ -187,3 +158,4 @@ window.onbeforeunload = function () {
     return "Are you sure you want to leave the worlds best game?";
     console.log('e')
 };
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
