@@ -85,7 +85,7 @@ if (localStorage.bananas != null) {
 }
 
 if (localStorage.bananaCost == null) {
-    var bananaCost = Math.floor(40 * Math.pow(1.15, parseInt(localStorage.bananas)));
+    var bananaCost = Math.floor(40 * Math.pow(1.05, parseInt(localStorage.bananas)));
     console.log(bananaCost)
 
     localStorage.setItem('bananaCost', bananaCost)
@@ -98,7 +98,7 @@ function buyBanana() {
 
     //  document.getElementById('cursors').innerHTML = JSON.parse(localStorage.getItem('save')).cursors
 
-    var bananaCost = Math.floor(40 * Math.pow(1.15, bananaCount));
+    var bananaCost = Math.floor(40 * Math.pow(1.05, bananaCount));
 
     if (localStorage.clickcount < bananaCost) {
 
