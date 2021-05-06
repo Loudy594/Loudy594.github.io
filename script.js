@@ -34,7 +34,6 @@ function buyCursor() {
 
     if (localStorage.clickcount < cursorCost) {
 
-        alert('You do not have enough monkes to buy this!')
     } else if (localStorage.clickcount >= cursorCost) {
         cursorCount = cursorCount + 1;
 
@@ -86,7 +85,6 @@ function buyBanana() {
 
     if (localStorage.clickcount < bananaCost) {
 
-        alert('You do not have enough bananas to buy this!')
     } else if (localStorage.clickcount >= bananaCost) {
         bananaCount = bananaCount + 1;
 
