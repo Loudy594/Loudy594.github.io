@@ -7,10 +7,6 @@ function clickCounter() {
     document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
 if (localStorage.cursors == null) {
     var cursors = 0
     localStorage.setItem('cursors', cursors)
@@ -73,7 +69,7 @@ if (localStorage.bananas != null) {
 }
 
 if (localStorage.bananaCost == null) {
-    var bananaCost = Math.floor(40 * Math.pow(1.05, parseInt(localStorage.bananas)));
+    var bananaCost = Math.floor(40 * Math.pow(1.15, parseInt(localStorage.bananas)));
     console.log(bananaCost)
 
     localStorage.setItem('bananaCost', bananaCost)
@@ -86,7 +82,7 @@ function buyBanana() {
 
     //  document.getElementById('cursors').innerHTML = JSON.parse(localStorage.getItem('save')).cursors
 
-    var bananaCost = Math.floor(40 * Math.pow(1.05, bananaCount));
+    var bananaCost = Math.floor(40 * Math.pow(1.15, bananaCount));
 
     if (localStorage.clickcount < bananaCost) {
 
@@ -99,7 +95,7 @@ function buyBanana() {
 
         localStorage.clickcount = localStorage.clickcount - bananaCost;
         document.getElementById('banana').innerHTML = bananaCount;
-        document.getElementById('bananaCost').innerHTML = bananaCost;   
+        document.getElementById('bananaCost').innerHTML = bananaCost;
         document.getElementById('result').innerHTML = "Monke button was pressed " + localStorage.clickcount + " times"
 
         window.setInterval(function () {
@@ -133,6 +129,7 @@ function buyMultipleCursors() {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 window.onload = function () {
 
+    document.getElementById("result").innerHTML = "Monke button was pressed " + localStorage.clickcount + " times";
 
     parseInt(localStorage.getItem('clickcount'))
 
@@ -141,21 +138,23 @@ window.onload = function () {
 
     for (var i = 0; i < cursorCount; i++) {
         window.setInterval(function () {
-            
             clickCounter(cursorCount);
 
         }, 1000);
     }
+
     document.getElementById('banana').innerHTML = bananaCount
     document.getElementById('bananaCost').innerHTML = bananaCost
 
     for (var i = 0; i < bananaCount; i++) {
         window.setInterval(function () {
+
             clickCounter(bananaCount);
 
         }, 250);
     }
 
+}
 
 window.onbeforeunload = function () {
     return "Are you sure you want to leave the worlds best game?";
