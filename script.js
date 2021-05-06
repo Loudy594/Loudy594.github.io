@@ -127,7 +127,9 @@ function buyMultipleCursors() {
 
 function manyMoney() {
     var manyMoneyGet = parseInt(localStorage.getItem('clickcount'));
-    localStorage.clickcount = manyMoneyGet + 1000000
+    localStorage.clickcount = manyMoneyGet + 1000000000000
+    var losMoney = document.getElementById('losMoney');
+    losMoney.remove();
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
