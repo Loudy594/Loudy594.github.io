@@ -8,7 +8,7 @@
 <head>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+<script src='https://unpkg.com/trianglify@^4/dist/trianglify.bundle.js'></script>
   <link rel="stylesheet" href="styles.css">
   <meta charset="utf-8">
   <meta name="description" content="A monke clicker">
@@ -25,6 +25,15 @@
 <!------------------------------------------------------------Body------------------------------------------------------------>
 
 <body>
+<script>
+  const pattern = trianglify({
+    width: window.innerWidth,
+    height: window.innerHeight
+  })
+  document.body.appendChild(pattern.toCanvas())
+</script>
+	
+	
   <button id="shopButton" onclick="shopButtonClick();">Shop</button>
   <h1 style="font-size:40px" id="monker">Welcome To Monke Clicker created by Charlie and Aaron</h1>
   <h2 style="font-size:17px" id="monker2">
