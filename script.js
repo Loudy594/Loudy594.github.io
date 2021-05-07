@@ -142,7 +142,6 @@ window.onload = function () {
         }, 1000);
     }
     
-    localStorage.clear()
 
     document.getElementById('banana').innerHTML = bananaCount
     document.getElementById('bananaCost').innerHTML = bananaCost
